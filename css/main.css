@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+}
+
+.body {
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    gap: 15px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+
+    grid-template-areas:
+		"header header header"
+		"container container container"
+		"container container container"
+		"footer footer footer";
+}
+
+.body .header,
+.body .container,
+.body .footer {
+    padding: 20px;
+	border-radius: 4px;
+}
+
+.header {
+    background: #12203e;
+	color: #fff;
+	grid-area: header;
+}
+
+.header h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container {
+    margin-bottom: 25px;
+    height: 100%;
+    width: 90%;
+    justify-self: center;
+    grid-area: container;
+    background-color: rgb(179, 179, 179);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-tarea {
+    height: 100%;
+}
+
+.form-tarea form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-tarea form input {
+    border: none;
+    border-radius: 3px;
+    padding: 2px 2px;
+    margin-right: 5px;
+}
+
+.form-tarea form button {
+    border: none;
+    border-radius: 3px;
+    padding: 3px 5px;
+    background-color: #122033;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.todo-list ul li {
+    margin: 3px 0;
+}
+
+.todo-list ul li button {
+    border: none;
+    background-color: #122033;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 3px 5px;
+}
+
+.terminada {
+    text-decoration: line-through;
+}
+
+.footer {
+    grid-area: footer;
+    margin-top: 50px;
+    justify-self: center;
+    background: #faa43d;
+    width: 95%;
+}
+
+
+
+
+
